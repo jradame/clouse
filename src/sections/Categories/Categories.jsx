@@ -1,6 +1,8 @@
 import styles from "./Categories.module.css";
 import travelCover from "../../assets/images/travel/venice2016.jpg";
 import hospitalityCover from "../../assets/images/hospitality/hospitality-cover.webp";
+import commissionedCover from "../../assets/images/commissioned work/double-helix.jpg";
+
 
 
 
@@ -17,12 +19,13 @@ const categories = [
     href: "/hospitality-retail",
     image: hospitalityCover,
   },
-  {
-    id: 3,
-    label: "Collection Three",
-    href: "/collection-three",
-    image: null,
-  },
+ {
+  id: 3,
+  label: "Commissioned Work",
+  href: "/commissioned-work",
+  image: commissionedCover,
+},
+
 ];
 
 

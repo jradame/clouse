@@ -1,5 +1,8 @@
 import styles from "./Categories.module.css";
 import travelCover from "../../assets/images/travel/venice2016.jpg";
+import hospitalityCover from "../../assets/images/hospitality/hospitality-cover.webp";
+
+
 
 const categories = [
   {
@@ -8,11 +11,11 @@ const categories = [
     href: "/travel-personal",
     image: travelCover,
   },
-  {
+{
     id: 2,
-    label: "Collection Two",
-    href: "/collection-two",
-    image: null,
+    label: "Hospitality + Retail",
+    href: "/hospitality-retail",
+    image: hospitalityCover,
   },
   {
     id: 3,
@@ -21,6 +24,7 @@ const categories = [
     image: null,
   },
 ];
+
 
 function Categories() {
   return (

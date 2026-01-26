@@ -1,0 +1,50 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  align-items: center;
+}
+
+.textBlock {
+  max-width: 34rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--color-text-main);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+.imageBlock {
+  justify-self: flex-end;
+}
+
+.imagePlaceholder {
+  width: 320px;
+  height: 420px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

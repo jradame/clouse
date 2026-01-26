@@ -1,0 +1,36 @@
+.section {
+  padding: var(--space-lg);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: var(--space-md);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.thumb {
+  width: 100%;
+  padding-top: 70%;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  margin-bottom: var(--space-sm);
+}
+
+.label {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

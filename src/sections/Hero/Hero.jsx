@@ -6,7 +6,8 @@ function Hero() {
       <div className={styles.textBlock}>
         <h1 className={styles.title}>Clouse Photography</h1>
         <p className={styles.subtitle}>
-          Photography focused on three distinct collections. Quiet, minimal, and intentional.
+          Photography focused on three distinct collections. Quiet, minimal,
+          and intentional.
         </p>
         <a href="#categories" className={styles.cta}>
           View portfolio
@@ -14,7 +15,6 @@ function Hero() {
       </div>
 
       <div className={styles.imageBlock}>
-        {/* Replace with real image later */}
         <div className={styles.imagePlaceholder}>Hero image</div>
       </div>
     </section>

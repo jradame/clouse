@@ -11,6 +11,12 @@
   letter-spacing: 0.08em;
 }
 
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .nav a {
   margin-left: var(--space-sm);
   text-decoration: none;

@@ -1,7 +1,7 @@
 import styles from "./Categories.module.css";
 import travelCover from "../../assets/images/travel/venice2016.jpg";
 import hospitalityCover from "../../assets/images/hospitality/hospitality-cover.webp";
-import commissionedCover from "../../assets/images/commissioned work/double-helix.jpg";
+import commissionedCover from "../../assets/images/commissioned-work/double-helix.jpg";
 
 
 

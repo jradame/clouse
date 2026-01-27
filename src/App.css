@@ -132,32 +132,31 @@ a {
 
 .home-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
-  gap: 2.5rem;                    /* was var(--space-lg) */
-  padding: 3rem 4rem;             /* less vertical, a bit less horizontal */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 2rem;
+  padding: 3rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
   align-items: center;
-  max-width: 1200px;              /* keep hero from stretching full browser */
-  margin: 0 auto;                 /* center the whole hero block */
 }
 
 
+/* text spans first 3 columns, image sits over the 4th (above Prints) */
 .home-hero-text {
-  max-width: 28rem;
+  grid-column: 1 / span 3;
 }
 
 .home-hero-title {
-  font-family: var(--font-heading);
-  font-size: 2.8rem;          /* was ~2.4rem */
-  letter-spacing: 0.06em;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.1rem;
 }
 
 .home-hero-subtitle {
-  color: var(--color-text-muted);
-  font-size: 1rem;            /* a touch larger */
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 32rem;
 }
+
 
 .home-hero-body {
   color: var(--color-text-muted);
@@ -179,21 +178,22 @@ a {
 }
 
 .home-hero-image-block {
-  justify-self: flex-end;
+  grid-column: 4 / span 1;
+  display: flex;
+  justify-content: center;
 }
 
-.home-hero-image-placeholder {
-  width: 260px;                   /* was 320px */
-  height: 340px;                  /* was 420px */
-  border: 1px solid #ddd;
-  background: #f7f7f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.home-hero-image {
+  width: 230px;           /* a bit narrower */
+  height: 310px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;   /* softer border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
+
+
 
 /* ========== GALLERY GRID (PAGES) ========== */
 
@@ -234,23 +234,26 @@ a {
 /* ========== CATEGORIES SECTION ========== */
 
 .categories-section {
-  padding: 0 var(--space-lg) 3rem;
+  padding: 1.5rem var(--space-lg) 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
+
 
 .categories-heading {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  margin-bottom: var(--space-md);
+  margin-bottom: 0.85rem;                   /* slightly tighter */
 }
 
-/* 4 larger cards per row on desktop */
+/* 4 cards per row on desktop */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: 2.25rem;
-  row-gap: 0;
+  column-gap: 2rem;
+  row-gap: 1.25rem;                          /* add small row gap instead of 0 */
 }
 
 /* Tablet: 2 per row */
@@ -274,13 +277,13 @@ a {
   color: inherit;
 }
 
-/* bigger, taller cards */
+/* make cards taller without changing row length */
 .categories-thumb {
   width: 100%;
-  padding-top: 70%;
-  background: #f2f2f2;
+  padding-top: 68%;        /* was 58%; taller cards like your reference */
+  background: #f5f5f5;
   border: 1px solid #ddd;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 0.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -293,7 +296,7 @@ a {
   object-fit: cover;
 }
 
-/* Prints special zoom to fill card more */
+/* Prints special zoom */
 .prints-image-wrapper {
   display: flex;
   align-items: center;
@@ -301,15 +304,16 @@ a {
 }
 
 .prints-image {
-  width: 130%;
+  width: 120%;
   height: auto;
 }
 
 .categories-label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
 
 /* ========== ABOUT MODAL CARD ========== */
 

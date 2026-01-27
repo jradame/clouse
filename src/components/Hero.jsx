@@ -1,3 +1,6 @@
+
+import profileImage from "../assets/images/profile/profile.jpg";
+
 function Hero() {
   return (
     <section className="home-hero">
@@ -23,9 +26,11 @@ function Hero() {
       </div>
 
       <div className="home-hero-image-block">
-        <div className="home-hero-image-placeholder">
-          Featured image
-        </div>
+        <img
+          src={profileImage}
+          alt="Portrait of Clouse Photography"
+          className="home-hero-image"
+        />
       </div>
     </section>
   );

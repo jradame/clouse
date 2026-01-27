@@ -4,7 +4,13 @@ function AboutPanel({ isOpen, onClose }) {
   const [animateOut, setAnimateOut] = useState(false);
 
   useEffect(() => {
-    if (isOpen) setAnimateOut(false);
+    function resetAnimation() {
+      setAnimateOut(false);
+    }
+
+    if (isOpen) {
+      resetAnimation();
+    }
   }, [isOpen]);
 
   if (!isOpen && !animateOut) return null;

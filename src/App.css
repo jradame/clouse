@@ -132,28 +132,41 @@ a {
 
 .home-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: var(--space-lg);
-  padding: var(--space-lg) var(--space-lg); /* same horizontal padding as header */
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  gap: 2.5rem;                    /* was var(--space-lg) */
+  padding: 3rem 4rem;             /* less vertical, a bit less horizontal */
   align-items: center;
+  max-width: 1200px;              /* keep hero from stretching full browser */
+  margin: 0 auto;                 /* center the whole hero block */
 }
 
 
 .home-hero-text {
-  max-width: 34rem;
+  max-width: 28rem;
 }
 
 .home-hero-title {
   font-family: var(--font-heading);
-  font-size: 2.4rem;
+  font-size: 2.8rem;          /* was ~2.4rem */
   letter-spacing: 0.06em;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 1rem;
 }
 
 .home-hero-subtitle {
   color: var(--color-text-muted);
-  margin-bottom: var(--space-md);
+  font-size: 1rem;            /* a touch larger */
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
 }
+
+.home-hero-body {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+}
+
 
 .home-hero-cta {
   display: inline-block;
@@ -170,14 +183,14 @@ a {
 }
 
 .home-hero-image-placeholder {
-  width: 320px;
-  height: 420px;
+  width: 260px;                   /* was 320px */
+  height: 340px;                  /* was 420px */
   border: 1px solid #ddd;
   background: #f7f7f7;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }

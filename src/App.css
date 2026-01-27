@@ -667,3 +667,66 @@ a {
   background: #fdfaf5;
   color: #15110c;
 }
+
+/* Base (desktop/tablet) stays as you have it */
+
+/* Medium screens - tighten spacing */
+@media (max-width: 960px) {
+  .contact-page {
+    padding: 4rem 3rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1.1fr;
+    column-gap: 2.5rem;
+  }
+
+  .contact-profile-image {
+    width: 380px;
+    height: 380px;
+  }
+
+  .contact-form-wrap {
+    width: 100%;
+    max-width: 520px;
+    margin-left: 0;
+  }
+}
+
+/* Small screens - stack vertically */
+@media (max-width: 720px) {
+  .contact-page {
+    padding: 3rem 1.75rem 3.5rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;        /* one column */
+    row-gap: 2.5rem;
+  }
+
+  .contact-profile-column {
+    justify-content: center;
+  }
+
+  .contact-profile-wrap {
+    transform: none;                   /* cancel manual offset on mobile */
+  }
+
+  .contact-profile-image {
+    width: 260px;
+    height: 260px;
+  }
+
+  .contact-form-column {
+    justify-content: center;
+  }
+
+  .contact-form-wrap {
+    max-width: 480px;
+    margin-left: 0;                    /* centered form */
+  }
+
+  .contact-form button.btn-primary {
+    width: 100%;                       /* easier tap target on phones */
+  }
+}

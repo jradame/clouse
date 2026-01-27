@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
-      <div className="layout-container footer-inner">
+      <div className="footer-inner">
         <span>© {new Date().getFullYear()} Clouse Photography</span>
         <div className="footer-links">
           <a href="https://instagram.com" target="_blank" rel="noreferrer">

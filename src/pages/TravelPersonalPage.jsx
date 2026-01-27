@@ -1,35 +1,23 @@
-import styles from "./TravelPersonalPage.module.css";
-import Header from "../layout/Header.jsx";
-import Footer from "../layout/Footer.jsx";
-
-const photos = Array.from({ length: 34 }, (_, index) => ({
-  id: index + 1,
-  src: `/images/travel/travel-${index + 1}.jpg`, // adjust paths later
-  alt: `Travel + Personal ${index + 1}`,
-}));
+import travelCover from "../assets/images/travel/venice2016.jpg";
 
 function TravelPersonalPage() {
   return (
-    <>
-      <Header />
-      <main className={styles.main}>
-        <section className={styles.section}>
-          <h1 className={styles.title}>Travel + Personal</h1>
-          <p className={styles.subtitle}>
-            A selection of travel and personal work collected over the years.
-          </p>
+    <section className="page-section">
+      <h1 className="page-title">Travel &amp; Personal</h1>
+      <p className="page-subtitle">
+        Personal work and travel images that inform commissioned projects.
+      </p>
 
-          <div className={styles.grid}>
-            {photos.map((photo) => (
-              <figure key={photo.id} className={styles.item}>
-                <img src={photo.src} alt={photo.alt} className={styles.image} />
-              </figure>
-            ))}
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+      <div className="gallery-grid">
+        <div className="gallery-item">
+          <img
+            src={travelCover}
+            alt="Venice 2016"
+            className="gallery-image"
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,35 +1,24 @@
-import styles from "./CommissionedWorkPage.module.css";
-import Header from "../layout/Header.jsx";
-import Footer from "../layout/Footer.jsx";
-
-const photos = Array.from({ length: 34 }, (_, index) => ({
-  id: index + 1,
-  src: `/src/assets/images/collection-three/commissioned-${index + 1}.jpg`, // adjust filenames later
-  alt: `Commissioned Work ${index + 1}`,
-}));
+import commissionedCover from "../assets/images/commissioned-work/double-helix.jpg";
 
 function CommissionedWorkPage() {
   return (
-    <>
-      <Header />
-      <main className={styles.main}>
-        <section className={styles.section}>
-          <h1 className={styles.title}>Commissioned Work</h1>
-          <p className={styles.subtitle}>
-            Selected assignments for brands, publications, and clients.
-          </p>
+    <section className="page-section">
+      <h1 className="page-title">Commissioned Work</h1>
+      <p className="page-subtitle">
+        Selected commissions for clients across hospitality, product, and
+        editorial.
+      </p>
 
-          <div className={styles.grid}>
-            {photos.map((photo) => (
-              <figure key={photo.id} className={styles.item}>
-                <img src={photo.src} alt={photo.alt} className={styles.image} />
-              </figure>
-            ))}
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+      <div className="gallery-grid">
+        <div className="gallery-item">
+          <img
+            src={commissionedCover}
+            alt="Double helix installation"
+            className="gallery-image"
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 

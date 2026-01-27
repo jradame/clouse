@@ -1,17 +1,16 @@
-import Header from "../layout/Header.jsx";
-import Footer from "../layout/Footer.jsx";
-import Hero from "../sections/Hero/Hero.jsx";
-import Categories from "../sections/Categories/Categories.jsx";
+import Hero from "../components/Hero.jsx";
+import Categories from "../components/Categories.jsx";
 
 function HomePage() {
   return (
     <>
-      <Header />
-      <main>
+      <section className="page-section">
         <Hero />
+      </section>
+
+      <section className="page-section" id="portfolio">
         <Categories />
-      </main>
-      <Footer />
+      </section>
     </>
   );
 }

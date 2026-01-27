@@ -5,7 +5,7 @@
   --color-text-main: #000000;
   --color-text-muted: #2e2d2d;
 
---shadow-soft: 0 14px 30px rgba(120, 90, 60, 0.42);
+  --shadow-soft: 0 14px 30px rgba(120, 90, 60, 0.42);
   --font-heading: "brandon-grotesque", system-ui, -apple-system, sans-serif;
   --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
 
@@ -14,11 +14,17 @@
   --space-sm: 1rem;
 }
 
+/* ========== GLOBAL ========== */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 /* Global page background */
@@ -32,6 +38,19 @@ body {
 
 a {
   color: inherit;
+}
+
+/* App shell so footer sits at bottom on short pages */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main content flexes, footer stays pinned */
+.page-main {
+  flex: 1;
+  padding-bottom: var(--space-lg);
 }
 
 /* ========== LAYOUT CONTAINER ========== */
@@ -138,10 +157,6 @@ a {
 
 /* ========== GENERIC PAGE WRAPPER ========== */
 
-.page-main {
-  padding-bottom: var(--space-lg);
-}
-
 .page-section {
   margin: 0 0 var(--space-lg);
 }
@@ -162,6 +177,24 @@ a {
 /* widen portfolio section a bit if desired */
 #portfolio.page-section {
   max-width: none;
+}
+
+/* ========== SHARED GALLERY PAGE LAYOUT
+   (Travel / Hospitality / Prints)
+   Use: <section className="page-section gallery-page"> ... </section>
+   ========== */
+
+.gallery-page {
+  max-width: 960px;
+  margin:  auto 4rem;      /* center and add bottom spacing */
+  padding: 8.0rem 5rem;     /* consistent inset left/right + bottom */
+}
+
+/* align title, subtitle, and grid to same left axis */
+.gallery-page .page-title,
+.gallery-page .page-subtitle,
+.gallery-page .gallery-grid {
+  text-align: left;
 }
 
 /* ========== HOME HERO ========== */
@@ -226,7 +259,7 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
-/* ========== GALLERY GRID (PAGES) ========== */
+/* ========== GALLERY GRID (used inside gallery-page) ========== */
 
 .gallery-grid {
   display: grid;
@@ -449,6 +482,11 @@ a {
     padding: 1.75rem 2rem 2.5rem;
     max-width: 100%;
   }
+
+  .gallery-page {
+    padding: 0 2rem 2.5rem;
+    margin-bottom: 3rem;
+  }
 }
 
 /* Mobile: stack text over profile, full width */
@@ -479,6 +517,11 @@ a {
 
   .categories-thumb {
     padding-top: 70%;
+  }
+
+  .gallery-page {
+    padding: 0 1.5rem 2.25rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -520,40 +563,4 @@ a {
     color: #111;
     text-decoration: none;
   }
-}
-
-.travel-page {
-  padding: 0 4rem 3rem;   /* pulls content in from left/right */
-}
-
-/* tablet */
-@media (max-width: 900px) {
-  .travel-page {
-    padding: 0 2rem 2.5rem;
-  }
-}
-
-/* mobile */
-@media (max-width: 600px) {
-  .travel-page {
-    padding: 0 1.5rem 2.25rem;
-  }
-}
-
-html,
-body {
-  height: 100%;
-}
-
-/* App shell so footer sits at bottom on short pages */
-.app-shell {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* main content flexes, footer stays pinned */
-.page-main {
-  flex: 1;
-  padding-bottom: var(--space-lg);
 }

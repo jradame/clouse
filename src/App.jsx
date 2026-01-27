@@ -1,6 +1,8 @@
+// src/App.jsx
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+
 import HomePage from "./pages/HomePage.jsx";
 import TravelPersonalPage from "./pages/TravelPersonalPage.jsx";
 import HospitalityRetailPage from "./pages/HospitalityRetailPage.jsx";

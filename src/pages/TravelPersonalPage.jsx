@@ -1,8 +1,9 @@
+// src/pages/TravelPersonalPage.jsx
 import travelCover from "../assets/images/travel/venice2016.jpg";
 
 function TravelPersonalPage() {
   return (
-    <section className="page-section travel-page">
+    <section className="page-section gallery-page">
       <h1 className="page-title">Travel &amp; Personal</h1>
       <p className="page-subtitle">
         Personal work and travel images that inform commissioned projects.
@@ -12,7 +13,7 @@ function TravelPersonalPage() {
         <div className="gallery-item">
           <img
             src={travelCover}
-            alt="Venice 2016"
+            alt="Travel scene"
             className="gallery-image"
           />
         </div>
@@ -20,6 +21,5 @@ function TravelPersonalPage() {
     </section>
   );
 }
-
 
 export default TravelPersonalPage;

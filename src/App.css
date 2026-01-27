@@ -19,13 +19,15 @@
   box-sizing: border-box;
 }
 
+/* Global page background */
 body {
   margin: 0;
-  font-family: var(--font-body);
-  background-color: var(--color-bg);
-  color: var(--color-text-main);
-  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background-color: #f7f3eb;   /* light cream */
+  color: #111111;
 }
+
 
 a {
   color: inherit;

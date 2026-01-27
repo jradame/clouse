@@ -26,7 +26,7 @@ function Header() {
   return (
     <>
       <header className="header">
-        <div className="layout-container header-inner">
+        <div className="header-inner">
           <div className="header-logo">
             <Link to="/" className="header-logo-link">
               Clouse Photography
@@ -63,5 +63,6 @@ function Header() {
     </>
   );
 }
+
 
 export default Header;

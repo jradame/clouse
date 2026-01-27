@@ -34,15 +34,15 @@ a {
 /* ========== LAYOUT CONTAINER ========== */
 
 .layout-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ========== HEADER & FOOTER ========== */
 
 .header {
-  padding: var(--space-md) 0;
+  padding: var(--space-md) var(--space-lg);
 }
 
 .header-inner {
@@ -121,7 +121,7 @@ a {
 
 /* widen portfolio section a bit if desired */
 #portfolio.page-section {
-  max-width: 1400px;
+  max-width: none;
 }
 
 /* ========== HOME HERO ========== */
@@ -130,9 +130,10 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: var(--space-lg);
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-lg); /* same horizontal padding as header */
   align-items: center;
 }
+
 
 .home-hero-text {
   max-width: 34rem;
@@ -216,7 +217,7 @@ a {
 /* ========== CATEGORIES SECTION ========== */
 
 .categories-section {
-  padding: 0 0 3rem;
+  padding: 0 var(--space-lg) 3rem;
 }
 
 .categories-heading {

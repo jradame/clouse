@@ -14,6 +14,7 @@
   --space-sm: 1rem;
 }
 
+
 /* ========== GLOBAL ========== */
 
 *,
@@ -53,6 +54,7 @@ a {
   padding-bottom: var(--space-lg);
 }
 
+
 /* ========== LAYOUT CONTAINER ========== */
 
 .layout-container {
@@ -60,6 +62,7 @@ a {
   margin: 0;
   padding: 0;
 }
+
 
 /* ========== HEADER & FOOTER ========== */
 
@@ -141,12 +144,21 @@ a {
   border-top: 1px solid #eee;
 }
 
+/* three-column grid: left | center | right */
 .footer-inner {
-  max-width: 1725px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+}
+
+/* Left copyright text */
+.footer-inner > span {
+  justify-self: start;
+}
+
+/* Right links */
+.footer-links {
+  justify-self: end;
 }
 
 .footer-links a {
@@ -154,6 +166,20 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Middle credit line */
+.footer-credit {
+  justify-self: center;
+  text-align: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 -100px;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 
 /* ========== GENERIC PAGE WRAPPER ========== */
 
@@ -179,6 +205,7 @@ a {
   max-width: none;
 }
 
+
 /* ========== SHARED GALLERY PAGE LAYOUT
    (Travel / Hospitality / Prints)
    Use: <section className="page-section gallery-page"> ... </section>
@@ -186,8 +213,8 @@ a {
 
 .gallery-page {
   max-width: 960px;
-  margin:  auto 4rem;      /* center and add bottom spacing */
-  padding: 8.0rem 5rem;     /* consistent inset left/right + bottom */
+  margin: auto 4rem;          /* center and add bottom spacing */
+  padding: 8rem 5rem;         /* consistent inset left/right + bottom */
 }
 
 /* align title, subtitle, and grid to same left axis */
@@ -196,6 +223,7 @@ a {
 .gallery-page .gallery-grid {
   text-align: left;
 }
+
 
 /* ========== HOME HERO ========== */
 
@@ -259,6 +287,7 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
+
 /* ========== GALLERY GRID (used inside gallery-page) ========== */
 
 .gallery-grid {
@@ -295,6 +324,7 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
 
 /* ========== CATEGORIES SECTION ========== */
 
@@ -379,6 +409,7 @@ a {
   text-transform: uppercase;
 }
 
+
 /* ========== ABOUT MODAL CARD ========== */
 
 .slide-card-backdrop {
@@ -460,6 +491,7 @@ a {
   cursor: default;
 }
 
+
 /* ========== RESPONSIVE HERO & CATEGORIES ========== */
 
 /* Tablet: text and profile side‑by‑side */
@@ -525,6 +557,7 @@ a {
   }
 }
 
+
 /* ========== RESPONSIVE HEADER (HAMBURGER) ========== */
 
 @media (max-width: 700px) {
@@ -565,6 +598,9 @@ a {
   }
 }
 
+
+/* ========== CONTACT PAGE ========== */
+
 .contact-page {
   max-width: 960px;
   margin: 0 auto 4rem;
@@ -579,14 +615,14 @@ a {
   align-items: center;
 }
 
-//* LEFT column: image */
+/* LEFT column: image */
 .contact-profile-column {
   display: flex;
   justify-content: flex-start;
 }
 
 .contact-profile-wrap {
-  transform: translateX(-375px);   /* push left; try -100, -160, etc */
+  transform: translateX(-375px);   /* push left; adjust as needed */
 }
 
 .contact-profile-image {
@@ -597,24 +633,22 @@ a {
   box-shadow: 0 18px 40px rgba(15, 13, 10, 0.35);
 }
 
-
 /* RIGHT column: form */
 .contact-form-column {
   display: flex;
   justify-content: flex-start;
 }
 
+.contact-form-wrap {
+  width: 520px;      /* controls how wide the form stack is */
+  margin-left: 40px; /* move the whole form right; negative pulls left */
+}
+
 .contact-form-wrap .page-title {
   margin-bottom: 2rem;
 }
 
-.contact-form-wrap {
-  width: 520px;      /* controls how wide the form stack is */
-  margin-left: 40px; /* move the whole form right; use negative to pull left */
-}
-
-
-/* Form styles (unchanged) */
+/* Form styles */
 .contact-form {
   display: grid;
   gap: 1.25rem;
@@ -644,6 +678,7 @@ a {
   min-height: 150px;
 }
 
+/* Send button */
 .contact-form button.btn-primary {
   margin-top: 1.25rem;
   width: 220px;                 /* button width */
@@ -667,8 +702,6 @@ a {
   background: #fdfaf5;
   color: #15110c;
 }
-
-/* Base (desktop/tablet) stays as you have it */
 
 /* Medium screens - tighten spacing */
 @media (max-width: 960px) {

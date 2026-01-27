@@ -2,7 +2,7 @@ import travelCover from "../assets/images/travel/venice2016.jpg";
 
 function TravelPersonalPage() {
   return (
-    <section className="page-section">
+    <section className="page-section travel-page">
       <h1 className="page-title">Travel &amp; Personal</h1>
       <p className="page-subtitle">
         Personal work and travel images that inform commissioned projects.
@@ -20,5 +20,6 @@ function TravelPersonalPage() {
     </section>
   );
 }
+
 
 export default TravelPersonalPage;

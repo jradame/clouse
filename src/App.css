@@ -521,3 +521,39 @@ a {
     text-decoration: none;
   }
 }
+
+.travel-page {
+  padding: 0 4rem 3rem;   /* pulls content in from left/right */
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .travel-page {
+    padding: 0 2rem 2.5rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .travel-page {
+    padding: 0 1.5rem 2.25rem;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* App shell so footer sits at bottom on short pages */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main content flexes, footer stays pinned */
+.page-main {
+  flex: 1;
+  padding-bottom: var(--space-lg);
+}

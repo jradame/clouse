@@ -391,3 +391,10 @@ a {
   color: var(--color-text-muted);
   line-height: 1.6;
 }
+
+.nav-link--disabled {
+  pointer-events: none;         /* extra safety */
+  opacity: 0.4;
+  cursor: default;
+}
+

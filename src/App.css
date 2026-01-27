@@ -571,17 +571,22 @@ a {
   padding: 6rem 5rem;
 }
 
+/* 2-column layout */
 .contact-layout {
   display: grid;
   grid-template-columns: 1.2fr 1.4fr;
-  gap: 12rem;
+  column-gap: 4rem;
   align-items: center;
 }
 
-/* Left: profile */
-.contact-profile-panel {
+//* LEFT column: image */
+.contact-profile-column {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.contact-profile-wrap {
+  transform: translateX(-375px);   /* push left; try -100, -160, etc */
 }
 
 .contact-profile-image {
@@ -592,11 +597,24 @@ a {
   box-shadow: 0 18px 40px rgba(15, 13, 10, 0.35);
 }
 
-/* Right: form */
-.contact-form-panel .page-title {
+
+/* RIGHT column: form */
+.contact-form-column {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form-wrap .page-title {
   margin-bottom: 2rem;
 }
 
+.contact-form-wrap {
+  width: 520px;      /* controls how wide the form stack is */
+  margin-left: 40px; /* move the whole form right; use negative to pull left */
+}
+
+
+/* Form styles (unchanged) */
 .contact-form {
   display: grid;
   gap: 1.25rem;
@@ -627,5 +645,25 @@ a {
 }
 
 .contact-form button.btn-primary {
-  margin-top: 0.75rem;
+  margin-top: 1.25rem;
+  width: 220px;                 /* button width */
+  align-self: flex-start;       /* keeps it left-aligned with inputs */
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid #15110c;
+  background: #15110c;
+  color: #fdfaf5;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease,
+              background-color 160ms ease, color 160ms ease;
+}
+
+.contact-form button.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 13, 10, 0.25);
+  background: #fdfaf5;
+  color: #15110c;
 }

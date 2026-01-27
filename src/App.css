@@ -398,3 +398,63 @@ a {
   cursor: default;
 }
 
+/* Desktop already using repeat(4, 1fr) */
+
+/* Tablet: text and profile side‑by‑side */
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    column-gap: 1.5rem;
+  }
+
+  .home-hero-text {
+    grid-column: 1 / span 1;
+  }
+
+  .home-hero-image-block {
+    grid-column: 2 / span 1;
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile: stack text over profile, full width */
+@media (max-width: 600px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1.75rem;
+    padding: 2.25rem 1.5rem 2.5rem;
+  }
+
+  .home-hero-text,
+  .home-hero-image-block {
+    grid-column: 1 / -1;
+  }
+
+  .home-hero-image-block {
+    justify-content: center;
+  }
+
+  .home-hero-image {
+    width: 220px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 900px) {
+  .categories-section {
+    padding: 1.75rem 2rem 2.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-section {
+    padding: 1.5rem 1.5rem 2.25rem;
+  }
+
+  .categories-thumb {
+    padding-top: 70%;
+  }
+}
+
+

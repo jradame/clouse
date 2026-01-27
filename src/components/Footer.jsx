@@ -4,13 +4,14 @@ function Footer() {
       <div className="footer-inner">
         <span>© {new Date().getFullYear()} Clouse Photography</span>
         <div className="footer-links">
-          <a
-  href="https://instagram.com/yourhandle"
-  onClick={(e) => e.preventDefault()}
-  className="nav-link nav-link--disabled"
+          {/* <a
+  href="https://www.instagram.com/thisnormallife"
+  target="_blank"
+  rel="noopener noreferrer"
 >
   Instagram
-</a>
+</a> */}
+
 
           <a href="mailto:hello@example.com">Email</a>
         </div>

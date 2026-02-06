@@ -1,23 +1,25 @@
-// src/pages/HospitalityRetailPage.jsx
 import hospitalityCover from "../assets/images/hospitality/hospitality-cover.webp";
+
+const hospitalityCards = Array(12).fill(hospitalityCover);
 
 function HospitalityRetailPage() {
   return (
     <section className="page-section gallery-page">
-      <h1 className="page-title">Hospitality &amp; Retail</h1>
+      <h1 className="page-title">Hospitality & Retail</h1>
       <p className="page-subtitle">
-        Images crafted for hotels, restaurants, and retail spaces with a warm,
-        editorial focus on interiors, atmosphere, and details.
+        Photography for hospitality, retail, and commercial environments.
       </p>
 
       <div className="gallery-grid">
-        <div className="gallery-item">
-          <img
-            src={hospitalityCover}
-            alt="Hospitality interior"
-            className="gallery-image"
-          />
-        </div>
+        {hospitalityCards.map((imgSrc, index) => (
+          <div className="gallery-item" key={index}>
+            <img
+              src={imgSrc}
+              alt={`Hospitality project ${index + 1}`}
+              className="gallery-image"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
 import commissionedCover from "../assets/images/commissioned-work/double-helix.jpg";
 
+const commissionedCards = Array(12).fill(commissionedCover);
+
 function CommissionedWorkPage() {
   return (
     <section className="page-section gallery-page">
@@ -9,13 +11,15 @@ function CommissionedWorkPage() {
       </p>
 
       <div className="gallery-grid">
-        <div className="gallery-item">
-          <img
-            src={commissionedCover}
-            alt="Commissioned project"
-            className="gallery-image"
-          />
-        </div>
+        {commissionedCards.map((imgSrc, index) => (
+          <div className="gallery-item" key={index}>
+            <img
+              src={imgSrc}
+              alt={`Commissioned project ${index + 1}`}
+              className="gallery-image"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

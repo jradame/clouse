@@ -5,6 +5,7 @@ Minimal, image‑first portfolio site for Clouse Photography. Designed and coded
 ## Tech Stack
 
 - React (single‑page app)
+- React Router
 - Vite
 - Vanilla CSS
 - npm
@@ -12,8 +13,8 @@ Minimal, image‑first portfolio site for Clouse Photography. Designed and coded
 ## Features
 
 - Home hero with intro copy and featured image  
-- Category galleries: Travel, Hospitality/Retail, Prints, Commissioned Work  
-- Shared gallery layout for consistent image cards  
+- Category galleries: Travel & Personal, Hospitality/Retail, Prints, Commissioned Work  
+- Shared gallery layout for consistent 4×3 image grids  
 - Responsive design for desktop, tablet, and mobile  
 - Contact page with profile image and form (name, email, message)  
 - Global header with mobile hamburger navigation  
@@ -26,56 +27,53 @@ Minimal, image‑first portfolio site for Clouse Photography. Designed and coded
 - Node.js (LTS)
 - npm
 
-### Installation
+### Installation & Development
 
 ```bash
-git clone https://github.com/<your-username>/clouse-portfolio.git
-cd clouse-portfolio/clouse
+git clone https://github.com/<your-username>/clouse.git
+cd clouse
 npm install
 npm run dev
-Open the URL from the terminal (usually http://localhost:5173).
-npm run build
-Build output goes to dist/ and can be deployed to any static host.
 
 Project Structure
-text
 clouse/
+  ├─ public/
   ├─ src/
   │  ├─ assets/
-  │  │  └─ images/          # gallery + profile images
+  │  │  └─ images/
+  │  │     ├─ commissioned-work/
+  │  │     ├─ hospitality/
+  │  │     ├─ prints/
+  │  │     ├─ profile/
+  │  │     └─ travel/
   │  ├─ components/
-  │  │  ├─ Header.jsx
+  │  │  ├─ AboutPanel.jsx
+  │  │  ├─ Categories.jsx
   │  │  ├─ Footer.jsx
-  │  │  └─ ContactModal.jsx
+  │  │  ├─ Header.jsx
+  │  │  └─ Hero.jsx
   │  ├─ pages/
   │  │  ├─ HomePage.jsx
-  │  │  ├─ TravelPage.jsx
-  │  │  ├─ HospitalityPage.jsx
-  │  │  ├─ PrintsPage.jsx
   │  │  ├─ CommissionedWorkPage.jsx
+  │  │  ├─ TravelPersonalPage.jsx
+  │  │  ├─ HospitalityRetailPage.jsx
+  │  │  ├─ PrintsPage.jsx
   │  │  └─ ContactPage.jsx
   │  ├─ App.jsx
+  │  ├─ App.css
   │  └─ main.jsx
   ├─ index.html
-  └─ package.json
+  ├─ package.json
+  └─ vite.config.js
+
 Styling
-Single global stylesheet handles:
+A single global stylesheet (App.css) handles:
 
-Design tokens (color, spacing, type, shadows)
+Design tokens (color, spacing, typography, shadows)
 
-Gallery layout (.gallery-page, .gallery-grid, .gallery-item)
+Gallery layout (.gallery-page, .gallery-grid, .gallery-item, .gallery-image)
 
 Breakpoints for hero, galleries, and contact page
 
-Header, mobile nav, and footer alignment
-
-Contact
-For inquiries or commissions:
-
-Email: hello@example.com
-
-Instagram: @thisnormallife
-
-Designed & coded by Justin Adame.
-
+Header, mobile navigation, and footer alignment
 

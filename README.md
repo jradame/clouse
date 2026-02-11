@@ -1,79 +1,102 @@
-# Clouse Photography Portfolio
+# Clouse Photography Website
 
-Minimal, image‑first portfolio site for Clouse Photography. Designed and coded by Justin Adame, with emphasis on clean layout, responsive galleries, and a simple contact flow.
+A professional, image-first photography portfolio website built for a client to showcase work through a clean, minimal interface.
 
-## Tech Stack
+Designed and developed by Justin Adame with a focus on responsive layouts, reusable gallery components, and intuitive navigation.
 
-- React (single‑page app)
-- React Router
-- Vite
-- Vanilla CSS
+---
+
+## 🔗 Live Site
+
+https://clouse.vercel.app
+
+---
+
+## Overview
+
+Clouse Photography is a responsive single-page React application built to highlight visual content without distraction.
+
+The project emphasizes structured component architecture, consistent gallery layouts, and seamless navigation across multiple content categories.
+
+---
+
+## ✨ Key Features
+
+- Responsive, image-first design
+- Category-based gallery pages:
+  - Travel & Personal
+  - Hospitality / Retail
+  - Prints
+  - Commissioned Work
+- Reusable 4×3 gallery grid layout
+- Mobile-friendly hamburger navigation
+- Dedicated contact page with structured form inputs
+- Clean global layout with consistent header and footer
+- Performance-conscious image rendering
+
+---
+
+## 🛠 Tech Stack
+
+- React (SPA architecture)
+- React Router (multi-page routing)
+- Vite (build tooling)
+- Vanilla CSS (custom styling system)
 - npm
 
-## Features
+---
 
-- Home hero with intro copy and featured image  
-- Category galleries: Travel & Personal, Hospitality/Retail, Prints, Commissioned Work  
-- Shared gallery layout for consistent 4×3 image grids  
-- Responsive design for desktop, tablet, and mobile  
-- Contact page with profile image and form (name, email, message)  
-- Global header with mobile hamburger navigation  
-- Footer credit: “Designed & coded by Justin Adame”
+## 🧩 Architecture & Implementation
 
-## Getting Started
+The project uses a modular component structure:
 
-### Prerequisites
+- Shared layout components (Header, Footer, Hero)
+- Reusable gallery templates for consistent image presentation
+- Route-based page separation using React Router
+- Centralized global styling via design tokens
 
-- Node.js (LTS)
-- npm
+The gallery system was built for scalability, allowing new categories to be added with minimal structural changes.
 
-### Installation & Development
+---
 
-```bash
-git clone https://github.com/<your-username>/clouse.git
-cd clouse
+## 📁 Project Structure
+
+clouse-photography/
+├─ public/
+├─ src/
+│ ├─ assets/
+│ │ └─ images/
+│ ├─ components/
+│ ├─ pages/
+│ ├─ App.jsx
+│ ├─ App.css
+│ └─ main.jsx
+├─ index.html
+├─ package.json
+└─ vite.config.js
+
+
+---
+
+## 🚀 Development
+
+### Installation
+
+git clone https://github.com/jradame/Clouse-Photography-Website.git
+cd Clouse-Photography-Website
 npm install
 npm run dev
 
-Project Structure
-clouse/
-  ├─ public/
-  ├─ src/
-  │  ├─ assets/
-  │  │  └─ images/
-  │  │     ├─ commissioned-work/
-  │  │     ├─ hospitality/
-  │  │     ├─ prints/
-  │  │     ├─ profile/
-  │  │     └─ travel/
-  │  ├─ components/
-  │  │  ├─ AboutPanel.jsx
-  │  │  ├─ Categories.jsx
-  │  │  ├─ Footer.jsx
-  │  │  ├─ Header.jsx
-  │  │  └─ Hero.jsx
-  │  ├─ pages/
-  │  │  ├─ HomePage.jsx
-  │  │  ├─ CommissionedWorkPage.jsx
-  │  │  ├─ TravelPersonalPage.jsx
-  │  │  ├─ HospitalityRetailPage.jsx
-  │  │  ├─ PrintsPage.jsx
-  │  │  └─ ContactPage.jsx
-  │  ├─ App.jsx
-  │  ├─ App.css
-  │  └─ main.jsx
-  ├─ index.html
-  ├─ package.json
-  └─ vite.config.js
 
-Styling
-A single global stylesheet (App.css) handles:
+---
 
-Design tokens (color, spacing, typography, shadows)
+## 🎯 Development Focus
 
-Gallery layout (.gallery-page, .gallery-grid, .gallery-item, .gallery-image)
+While building this client project, I focused on:
 
-Breakpoints for hero, galleries, and contact page
-
-Header, mobile navigation, and footer alignment
+- Clean component abstraction
+- Scalable gallery structure
+- Consistent responsive behavior across breakpoints
+- Simple and intuitive content hierarchy
+- Maintaining visual balance for image-heavy layouts
 
